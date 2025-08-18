@@ -148,7 +148,7 @@ src/
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/Linuxthecoder/WasanGroupPlatfrom.git
 
 # Navigate to project directory
 cd trade-link-asia
@@ -261,3 +261,4 @@ This project is proprietary software owned by WasanGroup.
 ---
 
 **Built with ❤️ for global B2B commerce**
+
