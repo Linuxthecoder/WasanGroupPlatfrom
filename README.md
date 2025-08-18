@@ -151,7 +151,7 @@ src/
 git clone https://github.com/Linuxthecoder/WasanGroupPlatfrom.git
 
 # Navigate to project directory
-cd trade-link-asia
+cd frontend
 
 # Install dependencies
 npm install
@@ -261,4 +261,5 @@ This project is proprietary software owned by WasanGroup.
 ---
 
 **Built with ❤️ for global B2B commerce**
+
 
