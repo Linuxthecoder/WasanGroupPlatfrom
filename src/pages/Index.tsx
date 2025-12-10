@@ -46,41 +46,42 @@ import {
   PawPrint        // Pet Su
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import ctaBanner from "@/assets/cta-banner.png";
 
 const Index = () => {
 
   // Updated categories with Lucide icons instead of emojis
   const categories = [
-      { name: "Electronics", count: "12,450+", icon: Smartphone },
-      { name: "Consumer Electronics", count: "9,200+", icon: Headphones },
-      { name: "Textiles & Apparel", count: "8,320+", icon: Shirt },
-      { name: "Home & Garden", count: "6,890+", icon: House },
-      { name: "Machinery", count: "5,670+", icon: Factory },
-      { name: "Automotive", count: "4,230+", icon: CarFront },
-      { name: "Health & Beauty", count: "3,450+", icon: HeartPulse },
-      { name: "Computer & Office", count: "7,100+", icon: Laptop },
-      { name: "Sports & Entertainment", count: "2,800+", icon: Dumbbell },
-      { name: "Mother, Kids & Toys", count: "4,500+", icon: Baby },
-      { name: "Food & Beverage", count: "1,900+", icon: Utensils },
-      { name: "Business Services", count: "3,200+", icon: Briefcase },
-      { name: "Gaming", count: "1,650+", icon: Gamepad2 },
-      { name: "Photography", count: "2,100+", icon: Camera },
-      { name: "Watches", count: "1,800+", icon: Watch },
-      { name: "Jewelry", count: "2,400+", icon: Gem },
-    
-      { name: "Packaging & Printing", count: "2,950+", icon: Package },
-      { name: "Construction & Real Estate", count: "3,600+", icon: Building },
-      { name: "Energy", count: "1,750+", icon: Bolt },
-      { name: "Agriculture", count: "2,200+", icon: Leaf },
-      { name: "Medical Equipment", count: "2,850+", icon: Stethoscope },
-      { name: "Travel & Tourism", count: "1,400+", icon: Plane },
-      { name: "Furniture", count: "3,050+", icon: Armchair },
-      { name: "Shoes & Bags", count: "2,700+", icon: ShoppingBag },
-      { name: "Office Supplies", count: "2,300+", icon: FileText },
-      { name: "Security & Protection", count: "1,950+", icon: ShieldCheck },
-      { name: "Pet Supplies", count: "1,500+", icon: PawPrint }
-    
-    
+    { name: "Electronics", count: "12,450+", icon: Smartphone },
+    { name: "Consumer Electronics", count: "9,200+", icon: Headphones },
+    { name: "Textiles & Apparel", count: "8,320+", icon: Shirt },
+    { name: "Home & Garden", count: "6,890+", icon: House },
+    { name: "Machinery", count: "5,670+", icon: Factory },
+    { name: "Automotive", count: "4,230+", icon: CarFront },
+    { name: "Health & Beauty", count: "3,450+", icon: HeartPulse },
+    { name: "Computer & Office", count: "7,100+", icon: Laptop },
+    { name: "Sports & Entertainment", count: "2,800+", icon: Dumbbell },
+    { name: "Mother, Kids & Toys", count: "4,500+", icon: Baby },
+    { name: "Food & Beverage", count: "1,900+", icon: Utensils },
+    { name: "Business Services", count: "3,200+", icon: Briefcase },
+    { name: "Gaming", count: "1,650+", icon: Gamepad2 },
+    { name: "Photography", count: "2,100+", icon: Camera },
+    { name: "Watches", count: "1,800+", icon: Watch },
+    { name: "Jewelry", count: "2,400+", icon: Gem },
+
+    { name: "Packaging & Printing", count: "2,950+", icon: Package },
+    { name: "Construction & Real Estate", count: "3,600+", icon: Building },
+    { name: "Energy", count: "1,750+", icon: Bolt },
+    { name: "Agriculture", count: "2,200+", icon: Leaf },
+    { name: "Medical Equipment", count: "2,850+", icon: Stethoscope },
+    { name: "Travel & Tourism", count: "1,400+", icon: Plane },
+    { name: "Furniture", count: "3,050+", icon: Armchair },
+    { name: "Shoes & Bags", count: "2,700+", icon: ShoppingBag },
+    { name: "Office Supplies", count: "2,300+", icon: FileText },
+    { name: "Security & Protection", count: "1,950+", icon: ShieldCheck },
+    { name: "Pet Supplies", count: "1,500+", icon: PawPrint }
+
+
   ];
 
   const features = [
@@ -224,22 +225,25 @@ const Index = () => {
           </div>
 
           {/* Stats Section */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-orange-500 mb-2">200M+</div>
-              <div className="text-muted-foreground">products</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-orange-500 mb-2">200K+</div>
-              <div className="text-muted-foreground">suppliers</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-orange-500 mb-2">5,900</div>
-              <div className="text-muted-foreground">product categories</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-orange-500 mb-2">200+</div>
-              <div className="text-muted-foreground">countries and regions</div>
+          {/* Stats Section */}
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-10 max-w-5xl mx-auto transform -translate-y-8 relative z-10">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 divide-x divide-gray-100">
+              <div className="text-center px-4">
+                <div className="text-4xl font-bold text-accent mb-2 tracking-tight">200M+</div>
+                <div className="text-sm font-medium text-muted-foreground uppercase tracking-widest">products</div>
+              </div>
+              <div className="text-center px-4">
+                <div className="text-4xl font-bold text-accent mb-2 tracking-tight">200K+</div>
+                <div className="text-sm font-medium text-muted-foreground uppercase tracking-widest">suppliers</div>
+              </div>
+              <div className="text-center px-4">
+                <div className="text-4xl font-bold text-accent mb-2 tracking-tight">5,900</div>
+                <div className="text-sm font-medium text-muted-foreground uppercase tracking-widest">categories</div>
+              </div>
+              <div className="text-center px-4">
+                <div className="text-4xl font-bold text-accent mb-2 tracking-tight">200+</div>
+                <div className="text-sm font-medium text-muted-foreground uppercase tracking-widest">countries</div>
+              </div>
             </div>
           </div>
         </div>
@@ -258,8 +262,8 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="text-center border-border hover:shadow-xl hover:scale-105 transition-all duration-300 h-full">
               <CardHeader className="pb-4">
-                <div className="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle className="h-10 w-10 text-blue-600" />
+                <div className="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle className="h-10 w-10 text-accent" />
                 </div>
                 <CardTitle className="text-xl font-bold mb-3">Verified Suppliers</CardTitle>
               </CardHeader>
@@ -272,8 +276,8 @@ const Index = () => {
 
             <Card className="text-center border-border hover:shadow-xl hover:scale-105 transition-all duration-300 h-full">
               <CardHeader className="pb-4">
-                <div className="w-20 h-20 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <MessageSquare className="h-10 w-10 text-green-600" />
+                <div className="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <MessageSquare className="h-10 w-10 text-accent" />
                 </div>
                 <CardTitle className="text-xl font-bold mb-3">Direct Communication</CardTitle>
               </CardHeader>
@@ -286,8 +290,8 @@ const Index = () => {
 
             <Card className="text-center border-border hover:shadow-xl hover:scale-105 transition-all duration-300 h-full">
               <CardHeader className="pb-4">
-                <div className="w-20 h-20 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Shield className="h-10 w-10 text-purple-600" />
+                <div className="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Shield className="h-10 w-10 text-accent" />
                 </div>
                 <CardTitle className="text-xl font-bold mb-3">Trade Assurance</CardTitle>
               </CardHeader>
@@ -300,8 +304,8 @@ const Index = () => {
 
             <Card className="text-center border-border hover:shadow-xl hover:scale-105 transition-all duration-300 h-full">
               <CardHeader className="pb-4">
-                <div className="w-20 h-20 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <TrendingUp className="h-10 w-10 text-orange-600" />
+                <div className="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <TrendingUp className="h-10 w-10 text-accent" />
                 </div>
                 <CardTitle className="text-xl font-bold mb-3">Market Insights</CardTitle>
               </CardHeader>
@@ -388,11 +392,19 @@ const Index = () => {
 
 
 
+
       {/* Call to Action */}
-      <section className="py-24 bg-gradient-to-r from-primary to-accent text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6 tracking-tight">Ready to Start Trading?</h2>
-          <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
+      <section className="relative py-24 overflow-hidden">
+        {/* Background Image & Overlay */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${ctaBanner})` }}
+        />
+        <div className="absolute inset-0 bg-primary/80 mix-blend-multiply" />
+
+        <div className="relative container mx-auto px-4 text-center z-10">
+          <h2 className="text-4xl font-bold mb-6 tracking-tight text-white">Ready to Start Trading?</h2>
+          <p className="text-xl text-blue-50 mb-12 max-w-3xl mx-auto leading-relaxed">
             Join thousands of successful businesses already using WasanGroup to source high-quality products from verified Chinese manufacturers.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -406,7 +418,7 @@ const Index = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="min-w-56 h-14 text-lg font-semibold border-white text-white hover:bg-white hover:text-primary"
+                className="min-w-56 h-14 text-lg font-semibold bg-white text-primary hover:bg-gray-200 hover:text-primary border-transparent"
               >
                 <Globe className="mr-3 h-6 w-6" />
                 List Your Business

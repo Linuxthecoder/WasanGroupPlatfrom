@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import suppliersHeader from "@/assets/suppliers-header.png";
 
 // Mock data for suppliers
 const mockSuppliers = [
@@ -140,18 +141,18 @@ const Suppliers = () => {
   useEffect(() => {
     const filtered = suppliers.filter(supplier => {
       const matchesSearch = supplier.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           supplier.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           supplier.products.some(product => product.toLowerCase().includes(searchQuery.toLowerCase()));
+        supplier.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        supplier.products.some(product => product.toLowerCase().includes(searchQuery.toLowerCase()));
       const matchesCategory = selectedCategory === "All Categories" || supplier.category === selectedCategory;
       const matchesLocation = selectedLocation === "All Locations" || supplier.location.includes(selectedLocation);
-      const matchesRating = selectedRating === "All Ratings" || 
-                           (selectedRating === "4.5+" && supplier.rating >= 4.5) ||
-                           (selectedRating === "4.0+" && supplier.rating >= 4.0) ||
-                           (selectedRating === "3.5+" && supplier.rating >= 3.5);
-      
+      const matchesRating = selectedRating === "All Ratings" ||
+        (selectedRating === "4.5+" && supplier.rating >= 4.5) ||
+        (selectedRating === "4.0+" && supplier.rating >= 4.0) ||
+        (selectedRating === "3.5+" && supplier.rating >= 3.5);
+
       return matchesSearch && matchesCategory && matchesLocation && matchesRating;
     });
-    
+
     setFilteredSuppliers(filtered);
   }, [searchQuery, selectedCategory, selectedLocation, selectedRating, suppliers]);
 
@@ -190,35 +191,42 @@ const Suppliers = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Header */}
-      <section className="bg-gradient-to-r from-primary/5 to-accent/5 border-b">
-        <div className="container mx-auto px-4 py-12 md:py-16">
+      <section className="relative overflow-hidden py-20 md:py-24">
+        {/* Background Image & Overlay */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${suppliersHeader})` }}
+        />
+        <div className="absolute inset-0 bg-slate-900/90 mix-blend-multiply" />
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-10">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
               Global Supplier Directory
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
               Connect with verified manufacturers and trusted suppliers worldwide
             </p>
           </div>
-          
+
           {/* Search and Filters */}
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-2xl">
             <div className="relative mb-4">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 h-5 w-5" />
               <Input
                 type="text"
                 placeholder="Search suppliers, products, or company names..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-12 h-14 text-base md:text-lg border-2 focus:border-primary rounded-xl"
+                className="pl-12 h-14 text-base md:text-lg border-transparent focus:border-primary rounded-xl bg-white shadow-sm"
               />
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                <SelectTrigger className="h-12 text-base border-2 focus:border-primary rounded-xl">
+                <SelectTrigger className="h-12 text-base border-transparent focus:border-primary rounded-xl bg-white shadow-sm">
                   <SelectValue placeholder="All Categories" />
                 </SelectTrigger>
                 <SelectContent>
@@ -227,10 +235,10 @@ const Suppliers = () => {
                   ))}
                 </SelectContent>
               </Select>
-              
+
               <Select value={selectedLocation} onValueChange={setSelectedLocation}>
-                <SelectTrigger className="h-12 text-base border-2 focus:border-primary rounded-xl">
-                  <MapPin className="w-5 h-5 mr-2" />
+                <SelectTrigger className="h-12 text-base border-transparent focus:border-primary rounded-xl bg-white shadow-sm">
+                  <MapPin className="w-5 h-5 mr-2 text-gray-500" />
                   <SelectValue placeholder="All Locations" />
                 </SelectTrigger>
                 <SelectContent>
@@ -239,14 +247,14 @@ const Suppliers = () => {
                   ))}
                 </SelectContent>
               </Select>
-              
-              <Button 
-                variant="outline" 
-                className="h-12 border-2 rounded-xl justify-between"
+
+              <Button
+                variant="outline"
+                className="h-12 border-transparent bg-white shadow-sm rounded-xl justify-between hover:bg-gray-50"
                 onClick={() => setShowFilters(!showFilters)}
               >
                 <span className="flex items-center">
-                  <Filter className="h-5 w-5 mr-2" />
+                  <Filter className="h-5 w-5 mr-2 text-gray-500" />
                   More Filters
                   {activeFilters > 0 && (
                     <Badge className="ml-2" variant="secondary">{activeFilters}</Badge>
@@ -255,7 +263,7 @@ const Suppliers = () => {
                 <ChevronDown className={`h-5 w-5 transition-transform ${showFilters ? 'rotate-180' : ''}`} />
               </Button>
             </div>
-            
+
             {/* Advanced Filters */}
             {showFilters && (
               <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-border mb-6">
@@ -282,7 +290,7 @@ const Suppliers = () => {
                       </SelectContent>
                     </Select>
                   </div>
-                  
+
                   <div>
                     <label className="text-sm font-medium text-foreground mb-2 block">Verification</label>
                     <div className="flex space-x-4">
@@ -293,7 +301,7 @@ const Suppliers = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="flex justify-end mt-4">
                   <Button variant="ghost" onClick={clearFilters} className="mr-2">
                     Clear All
@@ -347,9 +355,9 @@ const Suppliers = () => {
 
         <div className="grid gap-6">
           {filteredSuppliers.map(supplier => (
-            <SupplierCard 
-              key={supplier.id} 
-              {...supplier} 
+            <SupplierCard
+              key={supplier.id}
+              {...supplier}
               onViewProfile={() => setSelectedSupplier(supplier)}
               onContact={() => setSelectedSupplier(supplier)}
             />
@@ -381,13 +389,13 @@ const Suppliers = () => {
             <DialogHeader>
               <DialogTitle className="text-2xl font-bold">{selectedSupplier.name}</DialogTitle>
             </DialogHeader>
-            
+
             <Tabs defaultValue="profile" className="mt-6">
               <TabsList className="grid w-full grid-cols-2">
                 <TabsTrigger value="profile">Company Profile</TabsTrigger>
                 <TabsTrigger value="contact">Contact Supplier</TabsTrigger>
               </TabsList>
-              
+
               <TabsContent value="profile">
                 <Card className="mt-4">
                   <CardContent className="pt-6">
@@ -405,11 +413,11 @@ const Suppliers = () => {
                             <span className="ml-1 font-medium">{selectedSupplier.rating}</span>
                           </div>
                         </div>
-                        
+
                         <p className="text-muted-foreground mb-6 leading-relaxed">
                           {selectedSupplier.description}
                         </p>
-                        
+
                         <div className="grid grid-cols-2 gap-4 mb-6">
                           <div>
                             <h4 className="font-semibold text-foreground mb-2">Location</h4>
@@ -431,7 +439,7 @@ const Suppliers = () => {
                           </div>
                         </div>
                       </div>
-                      
+
                       <div>
                         <h3 className="text-lg font-semibold mb-4">Main Products</h3>
                         <div className="grid gap-2">
@@ -441,7 +449,7 @@ const Suppliers = () => {
                             </Badge>
                           ))}
                         </div>
-                        
+
                         <h3 className="text-lg font-semibold mt-6 mb-4">Certifications</h3>
                         <div className="grid gap-2">
                           {selectedSupplier.certifications.map((cert, index) => (
@@ -455,7 +463,7 @@ const Suppliers = () => {
                   </CardContent>
                 </Card>
               </TabsContent>
-              
+
               <TabsContent value="contact">
                 <Card className="mt-4">
                   <CardHeader>
@@ -493,7 +501,7 @@ const Suppliers = () => {
                           </div>
                         </div>
                       </div>
-                      
+
                       <div>
                         <form onSubmit={handleContactSubmit} className="space-y-4">
                           <div className="space-y-2">
@@ -543,7 +551,7 @@ const Suppliers = () => {
           </DialogContent>
         </Dialog>
       )}
-      
+
       <Footer />
     </div>
   );

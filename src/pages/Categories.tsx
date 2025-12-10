@@ -21,6 +21,7 @@ import {
   Gamepad2
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import categoriesHeader from "@/assets/categories-header.png";
 
 const Categories = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -119,28 +120,35 @@ const Categories = () => {
   );
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gray-50">
       <Navigation />
-      
+
       {/* Header */}
-      <section className="bg-gradient-to-r from-primary/5 to-accent/5 border-b">
-        <div className="container mx-auto px-4 py-16">
+      <section className="relative overflow-hidden py-24">
+        {/* Background Image & Overlay */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${categoriesHeader})` }}
+        />
+        <div className="absolute inset-0 bg-slate-900/90 mix-blend-multiply" />
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center">
-            <h1 className="text-5xl font-bold text-foreground mb-6 tracking-tight">Product Categories</h1>
-            <p className="text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
+            <h1 className="text-5xl font-bold text-white mb-6 tracking-tight">Product Categories</h1>
+            <p className="text-xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed">
               Explore thousands of high-quality products across various industries from verified suppliers
             </p>
           </div>
-          
+
           {/* Search */}
           <div className="max-w-lg mx-auto relative">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
             <Input
               type="text"
               placeholder="Search categories and products..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-12 h-14 text-lg border-2 focus:border-primary"
+              className="pl-12 h-14 text-lg border-transparent focus:border-primary bg-white/95 backdrop-blur-sm shadow-xl rounded-xl"
             />
           </div>
         </div>
@@ -152,38 +160,44 @@ const Categories = () => {
           {filteredCategories.map((category, index) => (
             <Card
               key={index}
-              className="group hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border-0 shadow-md h-full"
+              className="group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer border border-gray-100 shadow-sm bg-white h-full flex flex-col justify-between"
             >
-              <CardHeader className="pb-6">
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <category.icon className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
+              <CardHeader className="pb-4">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                    <category.icon className="w-7 h-7 text-primary group-hover:text-white transition-colors" />
                   </div>
-                  <div>
-                    <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors">
-                      {category.name}
-                    </CardTitle>
-                    <Badge variant="secondary" className="text-sm font-medium mt-1">
-                      {category.count}
-                    </Badge>
-                  </div>
+                  <Badge variant="secondary" className="px-3 py-1 bg-gray-100 text-gray-600 font-medium">
+                    {category.count}
+                  </Badge>
                 </div>
-                <CardDescription className="text-muted-foreground text-base leading-relaxed">
+
+                <CardTitle className="text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors mb-2">
+                  {category.name}
+                </CardTitle>
+                <CardDescription className="text-slate-500 text-base leading-relaxed line-clamp-2">
                   {category.description}
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
-                  <p className="text-base font-semibold text-foreground">Popular Products:</p>
-                  <div className="flex flex-wrap gap-2">
-                    {category.subcategories.slice(0, 4).map((sub, subIndex) => (
-                      <Badge key={subIndex} variant="outline" className="text-sm py-1 px-3">
-                        {sub}
-                      </Badge>
-                    ))}
+                <div className="space-y-6">
+                  <div>
+                    <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Popular Items</p>
+                    <div className="flex flex-wrap gap-2">
+                      {category.subcategories.slice(0, 3).map((sub, subIndex) => (
+                        <Badge key={subIndex} variant="outline" className="text-xs py-1.5 px-3 bg-gray-50 border-gray-200 text-gray-600 group-hover:border-primary/20 transition-colors">
+                          {sub}
+                        </Badge>
+                      ))}
+                      {category.subcategories.length > 3 && (
+                        <Badge variant="outline" className="text-xs py-1.5 px-2 bg-gray-50 border-gray-200 text-gray-400">
+                          +{category.subcategories.length - 3}
+                        </Badge>
+                      )}
+                    </div>
                   </div>
-                  <Link to={`/suppliers?category=${encodeURIComponent(category.name)}`}>
-                    <Button variant="outline" className="w-full mt-6 h-11 text-base font-semibold hover:bg-primary hover:text-white">
+                  <Link to={`/suppliers?category=${encodeURIComponent(category.name)}`} className="block">
+                    <Button className="w-full bg-gray-50 text-gray-900 hover:bg-primary hover:text-white border-0 shadow-none hover:shadow-lg transition-all duration-300 font-semibold h-12 rounded-xl">
                       View Suppliers
                     </Button>
                   </Link>

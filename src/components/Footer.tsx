@@ -1,19 +1,23 @@
-import { Globe } from "lucide-react";
+import logo from "@/assets/Nav-bar-logo.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-background py-16">
+    <footer className="bg-foreground text-background py-16 mt-16">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-12">
           <div>
-            <div className="flex items-center space-x-3 mb-6">
-              <Globe className="h-8 w-8" />
-              <span className="text-2xl font-bold">WasanGroup</span>
+            <div>
+              <img
+                src={logo}
+                alt="WasanGroup Logo"
+                className="h-50 w-auto object-contain -mt-24 -mb-20"
+                style={{ maxWidth: '300px' }}
+              />
+              <p className="text-muted text-base leading-relaxed">
+                Connecting global businesses with trusted Chinese manufacturers since 2024. Your gateway to reliable sourcing.
+              </p>
             </div>
-            <p className="text-muted text-base leading-relaxed">
-              Connecting global businesses with trusted Chinese manufacturers since 2024. Your gateway to reliable sourcing.
-            </p>
           </div>
 
           <div>
@@ -97,8 +101,8 @@ const Footer = () => {
 
         <div className="border-t border-muted mt-12 pt-8 text-center text-muted">
           <p className="text-base">
-            &copy; 2024 WasanGroup. All rights reserved. | 
-            <a href="#" className="hover:text-background transition-colors ml-2">Privacy Policy</a> | 
+            &copy; 2024 WasanGroup. All rights reserved. |
+            <a href="#" className="hover:text-background transition-colors ml-2">Privacy Policy</a> |
             <a href="#" className="hover:text-background transition-colors ml-2">Terms of Service</a>
           </p>
         </div>

@@ -8,47 +8,62 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 99%;
-    --foreground: 215 25% 15%;
+    /* Background: Soft White #F9FAFB */
+    --background: 210 20% 98%;
+    /* Text Primary: Charcoal #333333 */
+    --foreground: 0 0% 20%;
 
+    /* Card and Popover: White */
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 0 0% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 0 0% 20%;
 
-    --primary: 220 90% 25%;
+    /* Primary: Slate Gray #2F2F2F (Header, Nav, Text) */
+    --primary: 0 0% 18.4%;
     --primary-foreground: 0 0% 98%;
-    --primary-hover: 220 90% 22%;
+    --primary-hover: 0 0% 15%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 215 25% 25%;
+    /* Secondary: Graphite #1A1A1A (Footer, Dark Sections) */
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 15% 45%;
+    /* Muted: Lighter gray */
+    --muted: 210 40% 96.1%;
+    /* Text Secondary: Cool Gray #666666 */
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 15 85% 55%;
-    --accent-foreground: 0 0% 98%;
-    --accent-hover: 15 85% 50%;
+    /* Accent 1: Electric Blue #1E90FF (Buttons, Icons) */
+    /* Note: Ideally 'primary' is used for main buttons in Shadcn. 
+       If you want blue buttons, we should map 'primary' to blue or ensure buttons use 'accent'. 
+       However, based on the table, Primary is Slate Gray. 
+       We will define Accent as Electric Blue. */
+    --accent: 210 100% 56%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 210 100% 50%;
 
-    --success: 142 76% 36%;
-    --success-foreground: 0 0% 98%;
+    /* Success: Cyber Mint #00FFC6 */
+    --success: 167 100% 50%;
+    --success-foreground: 0 0% 10%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 220 90% 25%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 210 100% 56%;
+    /* Match accent */
 
     --radius: 0.5rem;
 
     /* Trade-specific design tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(220 90% 35%));
+    /* Accent 2: Sky Gradient */
+    --gradient-hero: linear-gradient(90deg, #007BFF, #00B8FF);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 40% 98%));
     --shadow-card: 0 2px 10px -2px hsl(220 90% 25% / 0.08);
     --shadow-card-hover: 0 8px 25px -5px hsl(220 90% 25% / 0.15);
-    --shadow-hero: 0 20px 50px -10px hsl(220 90% 25% / 0.3);
+    --shadow-hero: 0 20px 50px -10px hsl(210 100% 56% / 0.3);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
@@ -115,10 +130,20 @@ All colors MUST be HSL.
 }
 
 @keyframes flicker {
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
     opacity: 1;
   }
-  20%, 24%, 55% {
+
+  20%,
+  24%,
+  55% {
     opacity: 0.6;
   }
 }
@@ -127,22 +152,27 @@ All colors MUST be HSL.
   0% {
     transform: translate(0);
   }
+
   20% {
     transform: translate(-2px, 1px);
   }
+
   40% {
     transform: translate(1px, -1px);
   }
+
   60% {
     transform: translate(-1px, 2px);
   }
+
   80% {
     transform: translate(2px, -2px);
   }
+
   100% {
     transform: translate(0);
   }
-} 
+}
 
 @layer base {
   * {

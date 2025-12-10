@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search, ArrowRight, TrendingUp, Users, Globe } from "lucide-react";
-import heroImage from "@/assets/hero-trade.jpg"; // Ensure path is correct
+import heroImage from "@/assets/professional-hero.png"; // Ensure path is correct
 
 const HeroSection = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -22,65 +22,33 @@ const HeroSection = () => {
   return (
     <section
       className="relative flex items-center overflow-hidden"
-      style={{ minHeight: "100vh" }}
+      style={{ minHeight: "90vh" }}
     >
-      {/* Background Image */}
+      {/* Background Image with Professional Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${heroImage})`,
-          filter: "brightness(0.6) saturate(1.1)",
-          backgroundAttachment: "fixed",
         }}
         aria-hidden="true"
-      />
-
-      {/* Floating Particles */}
-      <div className="absolute inset-0 pointer-events-none">
-        {[...Array(6)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-white/30 rounded-full animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${i * 1.5}s`,
-              animationDuration: `${8 + Math.random() * 10}s`,
-            }}
-          />
-        ))}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/80 to-gray-900/40" />
       </div>
 
       {/* Content */}
-      <div className="relative container mx-auto px-6 py-12 md:px-10 lg:px-20">
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div className="relative container mx-auto px-6 py-20 md:px-10 lg:px-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Text & Search */}
           <div
-            className={`space-y-6 sm:space-y-8 transition-all duration-1000 transform ${
-              isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
-            }`}
-          >
-            {/* Trust Badge */}
-            <div
-              className={`inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white text-sm font-medium transition-all duration-500 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            className={`space-y-8 transition-all duration-1000 transform ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
               }`}
-              style={{ transitionDelay: "100ms" }}
-            >
-              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-              <span>Trusted by 100,000+ Global Buyers</span>
-            </div>
+          >
+
 
             {/* Headline */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white tracking-tight">
               The Leading
-              <span
-                className="block bg-gradient-to-r from-yellow-200 via-yellow-50 to-orange-200 bg-clip-text text-transparent"
-                style={{
-                  backgroundSize: "200% 200%",
-                  animation: "gradient-text 3s ease-in-out infinite",
-                }}
-              >
+              <span className="block text-accent mt-2">
                 B2B E-Commerce
               </span>
               Platform for Global Trade
@@ -88,131 +56,85 @@ const HeroSection = () => {
 
             {/* Subtitle */}
             <p
-              className={`text-sm md:text-base text-blue-100 leading-relaxed max-w-lg transition-all duration-700 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-              }`}
+              className={`text-lg text-gray-200 leading-relaxed max-w-xl transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+                }`}
               style={{ transitionDelay: "200ms" }}
             >
-              Empowering businesses worldwide with direct access to verified suppliers, 
-              seamless sourcing, and end-to-end trade solutions — all in one trusted platform.
+              Empowering businesses worldwide with direct access to verified suppliers,
+              seamless sourcing, and end-to-end trade solutions.
             </p>
 
-            {/* Glassmorphic Search Bar */}
+            {/* Search Bar - Refined */}
             <div
-              className={`backdrop-blur-xl bg-white/20 rounded-2xl p-6 border border-white/30 shadow-2xl transition-all duration-500 hover:shadow-3xl ${
-                searchFocused ? "ring-2 ring-white/50 scale-102" : ""
-              }`}
+              className={`relative max-w-2xl backdrop-blur-md bg-white/10 rounded-2xl p-2 border border-white/20 shadow-2xl transition-all duration-500 !mt-6 ${searchFocused ? "bg-white/15 border-white/30" : ""
+                }`}
             >
-              <h3 className="text-lg font-semibold text-white mb-4">Find Suppliers Now</h3>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <div className="relative flex-1 group">
+              <div className="flex flex-col sm:flex-row gap-2">
+                <div className="relative flex-1">
                   <Search
-                    className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-white/70"
+                    className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-300"
                     aria-hidden="true"
                   />
                   <Input
                     type="text"
-                    placeholder="Search products or suppliers..."
+                    placeholder="What are you looking for?"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     onFocus={() => setSearchFocused(true)}
                     onBlur={() => setSearchFocused(false)}
-                    className="pl-12 h-12 bg-white/20 text-white placeholder:text-white/60 text-lg rounded-xl border border-white/30 focus:ring-2 focus:ring-white/50 focus:shadow-xl transition-all"
-                    style={{ backdropFilter: "blur(4px)" }}
+                    className="pl-12 h-12 bg-transparent text-white placeholder:text-gray-400 text-lg border-none focus-visible:ring-0 focus-visible:ring-offset-0"
                   />
                 </div>
                 <Button
-                  variant="default"
                   size="lg"
-                  className="h-12 px-8 rounded-xl bg-gradient-to-r from-white to-gray-100 text-primary hover:from-white hover:to-white hover:scale-105 transition-all duration-300 font-medium group"
+                  className="h-12 px-8 rounded-xl bg-accent hover:bg-accent/90 text-white font-semibold text-base transition-all duration-300 shadow-lg hover:shadow-accent/25"
                 >
-                  Search Now
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  Search
                 </Button>
               </div>
             </div>
-              {/* Popular Categories - Glass Effect on Hover */}
+
+            {/* Popular Categories */}
             <div
-             className={`flex flex-wrap items-center gap-2 transition-all duration-700 ${
-             isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-           }`}
-  style={{ transitionDelay: "600ms" }}
->
-  <span className="text-blue-100 text-sm">Popular:</span>
-  {["Electronics", "Textiles", "Machinery", "Automotive"].map((category, index) => (
-    <Button
-      key={category}
-      variant="ghost"
-      size="sm"
-      style={{ transitionDelay: `${600 + index * 80}ms` }}
-      className="text-white backdrop-blur-none transition-all duration-300 text-xs px-3 py-1 rounded-full
-                 hover:backdrop-blur-sm hover:bg-white/10 hover:border hover:border-white/20 
-                 hover:shadow-lg hover:shadow-white/10
-                 active:translate-y-px
-                 hover:text-white"
-    >
-      {category}
-    </Button>
-  ))}
-</div>
+              className={`flex flex-wrap items-center gap-3 transition-all duration-700 !mt-3 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+                }`}
+              style={{ transitionDelay: "600ms" }}
+            >
+              <span className="text-gray-300 text-sm font-medium">Popular:</span>
+              {["Electronics", "Textiles", "Machinery", "Automotive"].map((category, index) => (
+                <button
+                  key={category}
+                  className="text-sm text-gray-300 hover:text-white hover:bg-white/10 px-3 py-1.5 rounded-lg border border-transparent hover:border-white/20 transition-all duration-300"
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
           </div>
 
-     {/* Right: Stats Cards (moved further up) */}
-<div className="space-y-4 mt-2 lg:-mt-4">
-  {stats.map((stat, index) => (
-    <div
-      key={index}
-      className={`backdrop-blur-sm bg-white/15 rounded-xl p-5 border border-white/30 hover:bg-white/20 transition-all duration-400 transform hover:-translate-y-0.5 hover:shadow-xl ${
-        isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-      }`}
-      style={{ transitionDelay: `${800 + index * 120}ms` }}
-    >
-      <div className="flex items-center space-x-3">
-        <div className="w-10 h-10 bg-white/25 rounded-lg flex items-center justify-center">
-          <stat.icon className="h-5 w-5 text-white" />
-        </div>
-        <div>
-          <p className="text-xl font-bold text-white">{stat.value}</p>
-          <p className="text-blue-100 text-xs">{stat.label}</p>
+          {/* Right: Stats Cards - Vertical Stack for professional look */}
+          <div className="hidden lg:flex flex-col gap-5 items-end justify-center mt-8">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className={`w-72 backdrop-blur-md bg-white/5 border border-white/10 p-5 rounded-2xl hover:bg-white/10 transition-all duration-500 group cursor-default ${isVisible ? "translate-x-0 opacity-100" : "translate-x-12 opacity-0"
+                  }`}
+                style={{ transitionDelay: `${800 + index * 150}ms` }}
+              >
+                <div className="flex items-center gap-4">
+                  <div className="h-12 w-12 rounded-xl bg-accent/20 flex items-center justify-center group-hover:bg-accent/30 transition-colors">
+                    <stat.icon className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-white tracking-tight">{stat.value}</div>
+                    <div className="text-sm text-gray-400 font-medium">{stat.label}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-  ))}
-</div>
-        </div>
-      </div>
-
-      {/* Inline Animations */}
-      <style>{`
-        @keyframes gradient-text {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
-        }
-        .animate-float {
-          animation: float 8s ease-in-out infinite;
-        }
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0px) translateX(0px);
-          }
-          25% {
-            transform: translateY(-20px) translateX(15px);
-          }
-          50% {
-            transform: translateY(-10px) translateX(-10px);
-          }
-          75% {
-            transform: translateY(15px) translateX(20px);
-          }
-        }
-      `}</style>
     </section>
   );
 };
