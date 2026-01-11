@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";

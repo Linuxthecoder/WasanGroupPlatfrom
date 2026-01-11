@@ -70,6 +70,11 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
+                    <Link to="/app/marketplace" className="hover:text-white transition-colors">
+                      Browse Marketplace
+                    </Link>
+                  </li>
+                  <li>
                     <a href="#" className="hover:text-white transition-colors">
                       Trade Assurance
                     </a>

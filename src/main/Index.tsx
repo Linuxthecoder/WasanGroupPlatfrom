@@ -1,8 +1,8 @@
 import { useState, useRef } from "react";
-import Navigation from "@/components/Navigation";
-import HeroSection from "@/components/HeroSection";
-import DiscoverySection from "@/components/DiscoverySection";
-import Footer from "@/components/Footer";
+import Navigation from "./components/Navigation";
+import HeroSection from "./components/HeroSection";
+import DiscoverySection from "./components/DiscoverySection";
+import Footer from "./components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -215,8 +215,8 @@ const Index = () => {
               </div>
 
               <div className="pt-4">
-                <Link to="/categories">
-                  <Button size="lg" className="h-12 px-8 text-base shadow-lg shadow-primary/20">
+                <Link to="/suppliers">
+                  <Button size="lg" className="h-12 px-8 text-base bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-600/20">
                     Start Sourcing Now <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>
@@ -225,7 +225,7 @@ const Index = () => {
 
             {/* Visual Representation (Abstract UI) */}
             <div className="lg:w-1/2 relative">
-              <div className="relative z-10 bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200/60 p-2">
+              <div className="relative z-10 bg-white rounded-2xl shadow-[0_30px_60px_-15px_rgba(37,99,235,0.3)] overflow-hidden border border-slate-200/60 p-2">
                 <div className="bg-slate-50 rounded-xl p-6 border border-slate-100">
                   {/* Mock UI Elements */}
                   <div className="flex justify-between items-center mb-8">

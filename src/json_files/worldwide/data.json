@@ -1,0 +1,146 @@
+{
+    "hubs": [
+        {
+            "country": "China",
+            "flag": "https://flagcdn.com/cn.svg",
+            "title": "Consumer Electronics",
+            "image": "https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=300&q=80"
+        },
+        {
+            "country": "India",
+            "flag": "https://flagcdn.com/in.svg",
+            "title": "Textiles & Garments",
+            "image": "https://images.unsplash.com/photo-1721578006568-17901600cff3?q=80&w=870&auto=format&fit=crop"
+        },
+        {
+            "country": "Vietnam",
+            "flag": "https://flagcdn.com/vn.svg",
+            "title": "Home Furniture",
+            "image": "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=300&q=80"
+        },
+        {
+            "country": "Turkey",
+            "flag": "https://flagcdn.com/tr.svg",
+            "title": "Carpets & Rugs",
+            "image": "https://images.unsplash.com/photo-1600166898405-da9535204843?auto=format&fit=crop&w=300&q=80"
+        },
+        {
+            "country": "USA",
+            "flag": "https://flagcdn.com/us.svg",
+            "title": "Machinery Parts",
+            "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=300&q=80"
+        }
+    ],
+    "topViewed": [
+        {
+            "id": 1,
+            "title": "Smart Home Devices",
+            "count": "1.2M views",
+            "image": "https://images.unsplash.com/photo-1730967844913-29eb5cae5f34?q=80&w=870&auto=format&fit=crop"
+        },
+        {
+            "id": 2,
+            "title": "Eco Packaging",
+            "count": "980k views",
+            "image": "https://images.unsplash.com/photo-1605648916361-9bc12ad6a569?auto=format&fit=crop&q=80&w=200"
+        },
+        {
+            "id": 3,
+            "title": "Fitness Gear",
+            "count": "850k views",
+            "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=200"
+        },
+        {
+            "id": 4,
+            "title": "Wireless Earbuds",
+            "count": "790k views",
+            "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&q=80&w=200"
+        },
+        {
+            "id": 5,
+            "title": "Kitchen Appliances",
+            "count": "720k views",
+            "image": "https://images.unsplash.com/photo-1586201375761-83865001e31b?auto=format&fit=crop&q=80&w=200"
+        },
+        {
+            "id": 6,
+            "title": "Office Furniture",
+            "count": "680k views",
+            "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=200"
+        }
+    ],
+    "inspirationProducts": [
+        {
+            "id": 101,
+            "name": "Luxury Office Desk",
+            "price": "$200 - $350",
+            "moq": "10 Sets",
+            "supplier": "ModernSpaces",
+            "rating": 4.8,
+            "image": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&q=80&w=400"
+        },
+        {
+            "id": 102,
+            "name": "Solar Garden Lights",
+            "price": "$5 - $12",
+            "moq": "100 Pcs",
+            "supplier": "GreenLight Co",
+            "rating": 4.5,
+            "image": "https://images.unsplash.com/photo-1765456598509-e8bcd53a8e26?q=80&w=387&auto=format&fit=crop"
+        },
+        {
+            "id": 103,
+            "name": "Custom Printed Mugs",
+            "price": "$2 - $5",
+            "moq": "500 Pcs",
+            "supplier": "PrintPro",
+            "rating": 4.7,
+            "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&q=80&w=400"
+        },
+        {
+            "id": 104,
+            "name": "Leather Travel Bag",
+            "price": "$45 - $80",
+            "moq": "50 Pcs",
+            "supplier": "LeatherCraft",
+            "rating": 4.9,
+            "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=400"
+        },
+        {
+            "id": 105,
+            "name": "Bluetooth Smart Watch",
+            "price": "$18 - $35",
+            "moq": "100 Pcs",
+            "supplier": "TimeTech",
+            "rating": 4.6,
+            "image": "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&q=80&w=400"
+        },
+        {
+            "id": 106,
+            "name": "Ergonomic Office Chair",
+            "price": "$75 - $140",
+            "moq": "20 Pcs",
+            "supplier": "ChairWorks",
+            "rating": 4.8,
+            "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=400"
+        },
+        {
+            "id": 107,
+            "name": "Stainless Steel Water Bottle",
+            "price": "$3 - $7",
+            "moq": "300 Pcs",
+            "supplier": "HydroLife",
+            "rating": 4.4,
+            "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=400"
+        },
+        {
+            "id": 108,
+            "name": "LED Desk Lamp",
+            "price": "$10 - $22",
+            "moq": "50 Pcs",
+            "supplier": "BrightLite",
+            "rating": 4.6,
+            "image": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&q=80&w=400"
+        }
+    ]
+}

@@ -1,0 +1,106 @@
+[
+    {
+        "id": 1,
+        "name": "Shenzhen Electronics Co., Ltd.",
+        "location": "CN",
+        "yearsInBusiness": 12,
+        "rating": 4.8,
+        "reviews": 234,
+        "responseTime": "< 4h",
+        "features": [
+            "Custom manufacturer",
+            "Verified Pro",
+            "ISO 9001"
+        ],
+        "mainProducts": [
+            "Smart Watches",
+            "Bluetooth Speakers",
+            "Earbuds"
+        ],
+        "images": [
+            "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&q=80&w=200",
+            "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=200",
+            "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&q=80&w=200"
+        ],
+        "factoryImage": "https://images.unsplash.com/photo-1565514020176-db79237072fd?auto=format&fit=crop&q=80&w=400",
+        "videoAvailable": true
+    },
+    {
+        "id": 2,
+        "name": "Guangzhou Textiles Group",
+        "location": "CN",
+        "yearsInBusiness": 20,
+        "rating": 4.6,
+        "reviews": 156,
+        "responseTime": "< 8h",
+        "features": [
+            "Verified Manufacturer",
+            "BSC 2021",
+            "OEM/ODM"
+        ],
+        "mainProducts": [
+            "Cotton T-Shirts",
+            "Performance Wear",
+            "Hoodies"
+        ],
+        "images": [
+            "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=200",
+            "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&q=80&w=200",
+            "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&q=80&w=200"
+        ],
+        "factoryImage": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=400",
+        "videoAvailable": false
+    },
+    {
+        "id": 3,
+        "name": "Vietnam Home Decor Artisans",
+        "location": "VN",
+        "yearsInBusiness": 8,
+        "rating": 4.9,
+        "reviews": 89,
+        "responseTime": "< 12h",
+        "features": [
+            "Handmade",
+            "Verified Pro",
+            "Eco-friendly"
+        ],
+        "mainProducts": [
+            "Bamboo Utensils",
+            "Woven Baskets",
+            "Ceramic Vases"
+        ],
+        "images": [
+            "https://images.unsplash.com/photo-1594385208974-2e75f8d7bb48?auto=format&fit=crop&q=80&w=200",
+            "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=200",
+            "https://images.unsplash.com/photo-1581783342308-f792ca80d406?auto=format&fit=crop&q=80&w=200"
+        ],
+        "factoryImage": "https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&q=80&w=400",
+        "videoAvailable": true
+    },
+    {
+        "id": 4,
+        "name": "Mumbai Leather Exports",
+        "location": "IN",
+        "yearsInBusiness": 15,
+        "rating": 4.5,
+        "reviews": 310,
+        "responseTime": "< 24h",
+        "features": [
+            "Genuine Leather",
+            "Verified",
+            "Custom Design"
+        ],
+        "mainProducts": [
+            "Laptop Bags",
+            "Wallets",
+            "Belts"
+        ],
+        "images": [
+            "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?auto=format&fit=crop&q=80&w=200",
+            "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&q=80&w=200",
+            "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=200"
+        ],
+        "factoryImage": "https://images.unsplash.com/photo-1563198804-b144cafc6127?auto=format&fit=crop&q=80&w=400",
+        "videoAvailable": false
+    }
+]

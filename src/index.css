@@ -4,12 +4,12 @@
 
 @layer base {
   :root {
-    /* Background: Pure White for clean look */
-    --background: 0 0% 100%;
-    /* #FFFFFF */
+    /* Background: Pearl White (Restored) */
+    --background: 0 0% 97.3%;
+    /* #F8F8F8 */
     /* Foreground: Deep Slate for readability */
     --foreground: 215 25% 20%;
-    /* #263238 - Typically Blue Gray */
+    /* #263238 */
 
     /* Card: White with subtle border distinction */
     --card: 0 0% 100%;
@@ -18,29 +18,23 @@
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 20%;
 
-    /* Primary: Authoritative Corporate Blue */
+    /* Primary: Wasan Corporate Blue (Restored) */
     --primary: 221 83% 53%;
-    /* #2563EB - Royal Blue */
+    /* #2563EB */
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 221 83% 45%;
 
-    /* Secondary: Light Slate for subtle backgrounds */
+    /* Secondary: Light Slate */
     --secondary: 210 40% 96.1%;
-    /* #F1F5F9 */
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    /* Muted: Neutral Gray for less emphasis */
+    /* Muted: Neutral Gray */
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    /* #64748B */
 
-    /* Accent: Vibrant Cyan/Teal for highlights */
-    --accent: 199 89% 48%;
-    /* #0EA5E9 - Sky Blue */
+    /* Accent: Blue (Updated from Orange) */
+    --accent: 221 83% 53%;
     --accent-foreground: 0 0% 100%;
-    --accent-hover: 199 89% 40%;
 
-    /* Destructive: Error/Delete */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
@@ -49,10 +43,6 @@
     --ring: 221 83% 53%;
 
     --radius: 0.5rem;
-
-    /* Professional Gradients */
-    --gradient-hero: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
-    --gradient-primary: linear-gradient(to right, #2563EB, #0EA5E9);
   }
 
   .dark {
@@ -88,7 +78,7 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 

@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "name": "Wireless Earbuds Pro 2",
+        "price": "$12.00 - $15.00",
+        "moq": "100 Units",
+        "supplier": "SoundTech Shenzhen",
+        "rating": 4.8,
+        "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?"
+    },
+    {
+        "id": 2,
+        "name": "Premium Cotton T-Shirts",
+        "price": "$2.50 - $4.00",
+        "moq": "500 Units",
+        "supplier": "Guangzhou Textiles",
+        "rating": 4.5,
+        "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?"
+    },
+    {
+        "id": 3,
+        "name": "Smart Home Hub Controller",
+        "price": "$25.00 - $30.00",
+        "moq": "50 Units",
+        "supplier": "IoT Solutions Inc",
+        "rating": 4.9,
+        "image": "https://images.unsplash.com/photo-1558002038-1091a1661116?"
+    },
+    {
+        "id": 4,
+        "name": "Industrial Hepa Filter",
+        "price": "$45.00 - $60.00",
+        "moq": "10 Units",
+        "supplier": "CleanAir Systems",
+        "rating": 4.7,
+        "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?"
+    },
+    {
+        "id": 5,
+        "name": "Organic Vitamin C Serum",
+        "price": "$8.50 - $12.00",
+        "moq": "200 Units",
+        "supplier": "Nature Beauty Labs",
+        "rating": 4.6,
+        "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?"
+    },
+    {
+        "id": 6,
+        "name": "RGB Mechanical Keyboard",
+        "price": "$18.00 - $25.00",
+        "moq": "100 Units",
+        "supplier": "KeyMaster Tech",
+        "rating": 4.7,
+        "image": "https://images.unsplash.com/photo-1595225476474-87563907a212?"
+    },
+    {
+        "id": 7,
+        "name": "Solar Power Bank 20000mAh",
+        "price": "$15.00 - $20.00",
+        "moq": "50 Units",
+        "supplier": "GreenEnergy Co",
+        "rating": 4.8,
+        "image": "https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?"
+    },
+    {
+        "id": 8,
+        "name": "Ergonomic Office Chair",
+        "price": "$85.00 - $120.00",
+        "moq": "20 Units",
+        "supplier": "Comfort Seating",
+        "rating": 4.6,
+        "image": "https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?"
+    },
+    {
+        "id": 9,
+        "name": "Fitness Smart Watch",
+        "price": "$22.00 - $28.00",
+        "moq": "50 Units",
+        "supplier": "FitTech Wearables",
+        "rating": 4.7,
+        "image": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?"
+    },
+    {
+        "id": 10,
+        "name": "Ceramic Coffee Mug Set",
+        "price": "$5.00 - $8.00",
+        "moq": "200 Units",
+        "supplier": "HomeDecor Ceramics",
+        "rating": 4.4,
+        "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?"
+    },
+    {
+        "id": 11,
+        "name": "Portable Bluetooth Speaker",
+        "price": "$18.00 - $24.00",
+        "moq": "100 Units",
+        "supplier": "AudioWave",
+        "rating": 4.6,
+        "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?"
+    },
+    {
+        "id": 12,
+        "name": "Minimalist LED Desk Lamp",
+        "price": "$12.00 - $18.00",
+        "moq": "150 Units",
+        "supplier": "BrightLiving",
+        "rating": 4.8,
+        "image": "https://images.unsplash.com/photo-1534073828943-f801091a7d58?"
+    },
+    {
+        "id": 13,
+        "name": "Bamboo Kitchen Utensils",
+        "price": "$4.00 - $6.00",
+        "moq": "500 Units",
+        "supplier": "EcoKitchen",
+        "rating": 4.9,
+        "image": "https://images.unsplash.com/photo-1594385208974-2e75f8d7bb48?"
+    },
+    {
+        "id": 14,
+        "name": "Leather Laptop Sleeve",
+        "price": "$15.00 - $20.00",
+        "moq": "50 Units",
+        "supplier": "UrbanCarry",
+        "rating": 4.7,
+        "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?"
+    },
+    {
+        "id": 15,
+        "name": "Yoga Mat Non-Slip",
+        "price": "$8.00 - $12.00",
+        "moq": "100 Units",
+        "supplier": "ActiveLife Gear",
+        "rating": 4.5,
+        "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?"
+    },
+    {
+        "id": 16,
+        "name": "Stainless Steel Water Bottle",
+        "price": "$6.00 - $9.00",
+        "moq": "300 Units",
+        "supplier": "HydrateCo",
+        "rating": 4.8,
+        "image": "https://images.unsplash.com/photo-1602143407151-11115cd4e69b?"
+    },
+    {
+        "id": 17,
+        "name": "Wireless Gaming Mouse",
+        "price": "$20.00 - $35.00",
+        "moq": "50 Units",
+        "supplier": "GamerGear Pro",
+        "rating": 4.6,
+        "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?"
+    },
+    {
+        "id": 18,
+        "name": "Essential Oil Diffuser",
+        "price": "$10.00 - $15.00",
+        "moq": "200 Units",
+        "supplier": "AromaHome",
+        "rating": 4.7,
+        "image": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a?"
+    },
+    {
+        "id": 19,
+        "name": "Canvas Tote Bag",
+        "price": "$2.00 - $3.50",
+        "moq": "1000 Units",
+        "supplier": "EcoBags Manufacturer",
+        "rating": 4.4,
+        "image": "https://images.unsplash.com/photo-1597484662317-c931388b688d?"
+    },
+    {
+        "id": 20,
+        "name": "Drone with 4K Camera",
+        "price": "$150.00 - $250.00",
+        "moq": "10 Units",
+        "supplier": "SkyHigh Tech",
+        "rating": 4.9,
+        "image": "https://images.unsplash.com/photo-1507582020474-9a35b7d455d9?"
+    }
+]
