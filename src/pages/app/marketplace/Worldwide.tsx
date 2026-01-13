@@ -28,6 +28,9 @@ const Worldwide = () => {
                     <Link to="/explore/marketplace/worldwide" className="text-2xl font-bold text-blue-600 border-b-4 border-blue-600 pb-1 whitespace-nowrap">
                         Worldwide
                     </Link>
+                    <Link to="/top-ranking" className="text-2xl font-bold text-slate-800 hover:text-blue-600 pb-1 whitespace-nowrap transition-colors">
+                        Top Ranking
+                    </Link>
                 </div>
 
                 {/* Section 1: Global Hubs Grid */}

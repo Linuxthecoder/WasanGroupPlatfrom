@@ -103,7 +103,7 @@ const Navigation = () => {
                         </Link>
 
                         {/* Always Visible Left Links + Explore Products */}
-                        <div className="hidden xl:flex items-center gap-3">
+                        <div className="flex items-center gap-3">
                             <Link to="/explore/marketplace/products">
                                 <Button variant="ghost" className={`text-sm font-medium px-2 h-auto py-1 ${buttonGhostClass}`}>
                                     Explore Products
@@ -149,7 +149,7 @@ const Navigation = () => {
                     <div className="flex items-center gap-4 lg:gap-5 flex-shrink-0 ml-auto mr-6">
 
                         {/* Deliver To (Auto-Detected) */}
-                        <div className="hidden lg:flex flex-col items-start leading-none cursor-pointer p-1 hover:bg-slate-100/10 rounded transition-colors group">
+                        <div className="flex flex-col items-start leading-none cursor-pointer p-1 hover:bg-slate-100/10 rounded transition-colors group">
                             <span className={`text-[10px] mb-0.5 whitespace-nowrap ${subTextColorClass}`}>Deliver to:</span>
                             <div className={`flex items-center gap-1 text-sm font-bold ${textColorClass}`}>
                                 <span className="text-base leading-none">{userCountry.flag}</span>
@@ -158,7 +158,7 @@ const Navigation = () => {
                         </div>
 
                         {/* Language */}
-                        <div className="hidden lg:flex items-center gap-2 cursor-pointer p-1 hover:bg-slate-100/10 rounded transition-colors group">
+                        <div className="flex items-center gap-2 cursor-pointer p-1 hover:bg-slate-100/10 rounded transition-colors group">
                             <Globe className={`w-5 h-5 ${iconColorClass}`} />
                             <div className="flex flex-col leading-none">
                                 <span className={`text-[10px] mb-0.5 ${subTextColorClass}`}>English</span>
@@ -189,8 +189,8 @@ const Navigation = () => {
                             </DropdownMenuContent>
                         </DropdownMenu>
 
-                        {/* Mobile Menu Toggle */}
-                        <Button variant="ghost" size="icon" className="lg:hidden">
+                        {/* Mobile Menu Toggle - HIDDEN FOR NOW */}
+                        <Button variant="ghost" size="icon" className="hidden">
                             <Menu className={`w-6 h-6 ${iconColorClass}`} />
                         </Button>
                     </div>

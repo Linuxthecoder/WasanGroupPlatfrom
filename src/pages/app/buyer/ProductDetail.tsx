@@ -11,7 +11,8 @@ import {
     ShoppingCart,
     CheckCircle2,
     ChevronRight,
-    Info
+    Info,
+    ShoppingBag
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
